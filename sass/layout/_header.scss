@@ -3,6 +3,10 @@ header {
         @include display(flex);
         @include justify-content(space-between);
         @include align-items(center);
+
+        li {
+            cursor: pointer;
+        }
     }
 
 }

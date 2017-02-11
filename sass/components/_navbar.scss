@@ -11,6 +11,14 @@ nav {
 
         li {
             padding: 10px;
+
+            a {
+                display: block;
+            }
+
+            &:hover a {
+                color: gray;
+            }
         }
     }
     @media(min-width: 650px) {
