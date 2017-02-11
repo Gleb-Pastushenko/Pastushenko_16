@@ -48,6 +48,8 @@ function accordionActivator(caller) {
 }
 
 function moveToSection() {
+    $('#main-menu').css('visibility', 'hidden');
+    $('#main-menu').attr('data-toggle', 'hidden');
     $('body').animate('scrollTop', $(caller).href.offsetTop);
 }
 
