@@ -1,0 +1,8 @@
+header {
+    .main-container {
+        @include display(flex);
+        @include justify-content(space-between);
+        @include align-items(center);
+    }
+
+}

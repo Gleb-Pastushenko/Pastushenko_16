@@ -5,47 +5,68 @@
     <title>Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link href="https://fonts.googleapis.com/css?family=Cambay" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 <div class="body-disable">
 </div>
+<div class="modal-form">
+    <div class="close" onclick="modalHide(this)">
+        x
+    </div>
+    <form action="#" method="post">
+        <div>
+            Enter your email:
+        </div>
+        <label for="mail"></label>
+        <input type="email" name="mail" id="mail">
+        <input type="submit" value="submit" onclick="modalHide(this)">
+    </form>
+</div>
 <header>
     <div class="main-container">
-        <div class="page-logo">
+        <div class="header-logo">
             FRONTEND&nbspMEMO
         </div>
         <nav>
-            <ul class="main-menu">
+            <ul class="main-menu" data-toggle="hidden" id="main-menu">
                 <li class="active"><a href="#">HOME</a></li>
                 <li><a href="#">BOOTSTRAP</a></li>
-                <li><a href="#">GIT</a></li>
-                <li><a href="#">JAVASCRIPT</a></li>
-                <li><a href="#">JQUERY</a></li>
-                <li><a href="#">SUBSCRIBE</a></li>
+                <li><a href="#git-section">GIT</a></li>
+                <li><a href="#" onclick="modalShow()">SUBSCRIBE</a></li>
             </ul>
+            <div class="main-menu-button">
+                <a href="#" class="icon-menu" onclick="mainMenuToggle()">
+                </a>
+            </div>
         </nav>
     </div>
 </header>
 <main>
-    <section class="bootstrap-section" id="bootstrap-section">
+    <section class="bootstrap-section">
         <div class="main-container">
             <h2>BOOTSTRAP</h2>
             <div class="content-wrapper">
                 <div class="about">
                     <h3>What is Bootstrap?</h3>
                     <p>
-                        Bootstrap is a free and open-source front-end web framework for designing websites and web applications.
-                        It contains HTML- and CSS-based design templates for typography, forms, buttons, navigation and other
-                        interface components, as well as optional JavaScript extensions. Unlike many web frameworks, it concerns
+                        Bootstrap is a free and open-source front-end web framework for designing websites and web
+                        applications.
+                        It contains HTML- and CSS-based design templates for typography, forms, buttons, navigation and
+                        other
+                        interface components, as well as optional JavaScript extensions. Unlike many web frameworks, it
+                        concerns
                         itself with front-end development only.
-                        Bootstrap is the second most-starred project on GitHub, with more than 105,000 stars and 47,000 forks.
+                        Bootstrap is the second most-starred project on GitHub, with more than 105,000 stars and 47,000
+                        forks.
                     </p>
                     <div class="button-wrapper">
                         <a href="http://getbootstrap.com/" class="btn btn-primary" target="_blank">READ MORE</a>
                     </div>
                 </div>
-                <div id="bootstrap" class="tabs-container" data-active="0">
+                <div class="tabs-container" data-active="0">
                     <ul class="tabs">
                         <li class="active" data-index="0">Navbar</li>
                         <li data-index="1">Grid system</li>
@@ -55,8 +76,10 @@
                     <ul class="content">
                         <li class="active">
                             <div>
-                                Navbars are responsive meta components that serve as navigation headers for your application or
-                                site. They begin collapsed (and are toggleable) in mobile views and become horizontal as the
+                                Navbars are responsive meta components that serve as navigation headers for your
+                                application or
+                                site. They begin collapsed (and are toggleable) in mobile views and become horizontal as
+                                the
                                 available viewport width increases.
                             </div>
                             <div class="popup-wrapper">
@@ -72,8 +95,10 @@
                         </li>
                         <li>
                             <div>
-                                Bootstrap includes a responsive, mobile first fluid grid system that appropriately scales up to
-                                12 columns as the device or viewport size increases. It includes predefined classes for easy
+                                Bootstrap includes a responsive, mobile first fluid grid system that appropriately
+                                scales up to
+                                12 columns as the device or viewport size increases. It includes predefined classes for
+                                easy
                                 layout options, as well as powerful mixins for generating more semantic layouts.
                             </div>
                             <div class="popup-wrapper">
@@ -89,7 +114,8 @@
                         </li>
                         <li>
                             <div>
-                                Toggleable, contextual menu for displaying lists of links. Made interactive with the dropdown
+                                Toggleable, contextual menu for displaying lists of links. Made interactive with the
+                                dropdown
                                 JavaScript plugin.
                             </div>
                             <div class="popup-wrapper">
@@ -124,16 +150,65 @@
         </div>
     </section>
     <section class="git-section" id="git-section">
-        <h2>GIT</h2>
-        <div class="git">
-
+        <div class="main-container">
+            <h2>GIT</h2>
+            <div class="content-wrapper">
+                <div class="accordion-container" data-active="0">
+                    <div class="accordion-item active">
+                        <div class="item-title">
+                            Project initialization
+                        </div>
+                        <div class="item-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet at dignissimos
+                            dolorum, et expedita illo minima nam nemo odit quae quasi quidem reiciendis, repellendus
+                            saepe sapiente ullam ut. Alias!
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="item-title">
+                            Files staging
+                        </div>
+                        <div class="item-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet at dignissimos
+                            dolorum, et expedita illo minima nam nemo odit quae quasi quidem reiciendis, repellendus
+                            saepe sapiente ullam ut. Alias!
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="item-title">
+                            Commiting
+                        </div>
+                        <div class="item-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet at dignissimos
+                            dolorum, et expedita illo minima nam nemo odit quae quasi quidem reiciendis, repellendus
+                            saepe sapiente ullam ut. Alias!
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="item-title">
+                            Pushing
+                        </div>
+                        <div class="item-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet at dignissimos
+                            dolorum, et expedita illo minima nam nemo odit quae quasi quidem reiciendis, repellendus
+                            saepe sapiente ullam ut. Alias!
+                        </div>
+                    </div>
+                </div>
+                <div class="about">
+                    <h3>Git Basics</h3>
+                    <p>
+                        So, what is Git in a nutshell? This is an important section to absorb, because if you understand
+                        what Git is and the fundamentals of how it works, then using Git effectively will probably be
+                        much easier for you. As you learn Git, try to clear your mind of the things you may know about
+                        other VCSs, such as Subversion and Perforce; doing so will help you avoid subtle confusion when
+                        using the tool. Git stores and thinks about information much differently than these other
+                        systems, even though the user interface is fairly similar, and understanding those differences
+                        will help prevent you from becoming confused while using it.
+                    </p>
+                </div>
+            </div>
         </div>
-    </section>
-    <section class="javascript-section" id="javascript-section">
-        <h2>JAVASCRIPT</h2>
-    </section>
-    <section class="jquery-section" id="jquery-section">
-        <h2>JQUERY</h2>
     </section>
 </main>
 <footer>

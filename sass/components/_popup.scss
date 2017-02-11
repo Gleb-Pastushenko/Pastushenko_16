@@ -10,6 +10,7 @@
     }
 
     .popup-placeholder {
+        z-index: 0;
         display: inline-block;
 
         &:hover {
@@ -26,17 +27,23 @@
     }
 
     &.active {
-        @include hint("Click again to CLOSE");
+
 
         .popup {
+            @include hint("Click again to CLOSE");
             display: inline-block;
+            margin: auto;
         }
 
         .popup-viewport {
+
+            @include display(flex);
+            z-index: 2;
             position: fixed;
             overflow: scroll;
-            right: 15px;
-            left: 15px;
+            right: 10px;
+            left: 10px;
+
         }
     }
 }

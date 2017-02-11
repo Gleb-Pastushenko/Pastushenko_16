@@ -1,6 +1,14 @@
 .content-wrapper {
     @include display(flex);
     @include flex-wrap(wrap);
+
+    .about {
+        padding: 0;
+
+        p {
+            margin-top: 20px;
+        }
+    }
 }
 
 .tabs-container, .accordion-container, .about {
@@ -8,13 +16,7 @@
     width: 100%;
 }
 
-.about {
-    padding: 0;
 
-    p {
-        margin-top: 20px;
-    }
-}
 
 @media (min-width: 550px) {
     .tabs-container {
@@ -38,5 +40,20 @@
 
     .tabs-container, .about {
         margin-top: 30px;
+    }
+}
+
+.git-section {
+    .content-wrapper {
+        @include flex-wrap(wrap);
+    }
+
+    .accordion-container, .about {
+        margin-top: 30px;
+    }
+
+    .about {
+        padding-right: 0;
+        padding-left: 15px;
     }
 }
