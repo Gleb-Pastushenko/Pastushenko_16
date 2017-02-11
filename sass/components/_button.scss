@@ -1,0 +1,11 @@
+.button-wrapper {
+    display: inline-block;
+    position: relative;
+
+    @include hint("Opens in new window");
+}
+
+.btn {
+    padding-bottom: 5px;
+    padding-top: 8px;
+}

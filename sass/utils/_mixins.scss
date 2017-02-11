@@ -1,0 +1,52 @@
+@mixin display($display) {
+    @if ($display == 'flex') {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    } @else {@if ($display == 'inline-flex') {
+        display: #{-webkit-inline-box};
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+    } @else {
+        display: $display;
+    }}
+}
+
+@mixin flex-wrap($wrap-type) {
+
+    @if ($wrap-type == 'wrap') {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    @if ($wrap-type == 'wrap-reverse') {
+        -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+    }
+
+    @if ($wrap-type == 'nowrap') {
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    }
+}
+
+@mixin flex-order($order) {
+    -webkit-box-ordinal-group: $order + 1;
+    -ms-flex-order: $order;
+    order: $order;
+}
+
+@mixin hint($hint-text) {
+    &:hover::before {
+        display: inline-block;
+        position: absolute;
+        white-space: nowrap;
+        padding: 5px 8px 3px 8px;
+        top: -30px;
+        content: $hint-text;
+        border-radius: 3px;
+        border: 1px burlywood solid;
+        background-color: wheat;
+        color: brown;
+    }
+}

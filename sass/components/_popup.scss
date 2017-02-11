@@ -1,0 +1,42 @@
+.popup-wrapper {
+    position: relative;
+
+    .popup {
+        display: none;
+
+        img {
+            width: auto;
+        }
+    }
+
+    .popup-placeholder {
+        display: inline-block;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        @include hint ("Click to enlarge");
+
+        img {
+            width: 100%;
+        }
+
+        position: static;
+    }
+
+    &.active {
+        @include hint("Click again to CLOSE");
+
+        .popup {
+            display: inline-block;
+        }
+
+        .popup-viewport {
+            position: fixed;
+            overflow: scroll;
+            right: 15px;
+            left: 15px;
+        }
+    }
+}

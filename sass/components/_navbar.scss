@@ -1,0 +1,5 @@
+nav {
+    .main-menu {
+        @include display(flex);
+    }
+}
