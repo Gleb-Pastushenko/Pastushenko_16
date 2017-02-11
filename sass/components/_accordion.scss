@@ -1,0 +1,38 @@
+.accordion-container {
+    .accordion-item {
+        border-radius: 5px;
+        border: 1px solid gray;
+        padding: 3px;
+
+        &.active {
+            .item-title {
+                background-color: transparent;
+
+            }
+
+            .item-description {
+                height: auto;
+                padding: 8px;
+                border: 1px solid gray;
+            }
+        }
+
+        .item-title {
+            border-radius: 5px;
+            border: 1px solid gray;
+            padding: 8px;
+            background-color: lightgray;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .item-description {
+            border-radius: 5px;
+            border: none;
+            padding: 0;
+            height: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+    }
+}
