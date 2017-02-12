@@ -24,7 +24,7 @@ nav {
     @media(min-width: 650px) {
         .main-menu {
             position: relative;
-            visibility: visible;
+            visibility: visible !important;
             @include display(flex);
             @include flex-direction(row);
             background-color: transparent;

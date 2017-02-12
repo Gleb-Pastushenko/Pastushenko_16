@@ -3,18 +3,15 @@
         border-radius: 5px;
         border: 1px solid gray;
         padding: 3px;
+        overflow: hidden;
+        height: 44px;
 
         &.active {
             .item-title {
                 background-color: transparent;
-
             }
 
-            .item-description {
-                height: auto;
-                padding: 8px;
-                border: 1px solid gray;
-            }
+            height: auto;
         }
 
         .item-title {
@@ -28,11 +25,10 @@
 
         .item-description {
             border-radius: 5px;
-            border: none;
-            padding: 0;
-            height: 0;
+            padding: 8px;
+            border: 1px solid gray;
+            margin-top: 3px;
             box-sizing: border-box;
-            overflow: hidden;
         }
     }
 }

@@ -40,6 +40,11 @@ function mainMenuToggle() {
 }
 
 function accordionActivator(caller) {
+    var item = $(caller).parent();
+    var description = $(item).children('.item-description');
+    $(item).animate({height: $(description).height() + 66}, 500);
+    $(item).siblings('.active').animate({height: 44}, 500);
+
     $(caller).parent().siblings('.active').removeClass('active');
     $(caller).parent().addClass('active');
 }
@@ -51,7 +56,9 @@ $('.main-menu a').click(function () {
         $('body').animate({scrollTop: $(scrollTo).offset().top}, 500);
     }
 
-    $('#main-menu').css('visibility', 'hidden').attr('data-toggle', 'hidden');
+    if ($('nav .main-menu-button').css('display') != 'none') {
+        $('#main-menu').css('visibility', 'hidden').attr('data-toggle', 'hidden');
+    }
 });
 
 function modalShow() {
